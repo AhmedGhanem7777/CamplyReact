@@ -1584,8 +1584,8 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-sm text-muted-foreground">المحافظة/الولاية</label>
-                    <Input value={stateName} onChange={(e) => setStateName(e.target.value)} placeholder="اكتب اسم المحافظة أو الولاية" />
+                    <label className="text-sm text-muted-foreground">المحافظة</label>
+                    <Input value={stateName} onChange={(e) => setStateName(e.target.value)} placeholder="اكتب اسم المحافظة" />
                   </div>
 
                   <div className="space-y-1">
