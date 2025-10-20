@@ -561,8 +561,8 @@ export default function AdminJoinRequests({ apiBase = "https://camply.runasp.net
                       {/* Rules & Times */}
                       <div className="grid sm:grid-cols-4 gap-3 text-sm">
                         <div><span className="text-muted-foreground">الحد الأدنى للعمر: </span><span className="font-medium">{Number(rules.minAge ?? 0) || "-"}</span></div>
-                        <div><span className="text-muted-foreground">تسجيل الدخول من: </span><span className="font-medium">{rules.checkInFrom || "-"}</span></div>
-                        <div><span className="text-muted-foreground">إلى: </span><span className="font-medium">{rules.checkInTo || "-"}</span></div>
+                        <div><span className="text-muted-foreground">تسجيل الدخول : </span><span className="font-medium">{rules.checkInFrom || "-"}</span></div>
+                        {/* <div><span className="text-muted-foreground">إلى: </span><span className="font-medium">{rules.checkInTo || "-"}</span></div> */}
                         <div><span className="text-muted-foreground">تسجيل الخروج: </span><span className="font-medium">{rules.checkOut || "-"}</span></div>
                       </div>
 

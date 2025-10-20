@@ -29,7 +29,7 @@ const AboutUs = () => {
         </motion.div>
 
         <div className="relative mb-20">
-          <img className="w-full h-96 object-cover rounded-lg shadow-lg" alt="Team of explorers looking at a map in a forest" src="https://images.unsplash.com/photo-1515966071294-08f1d52f6246" />
+          {/* <img className="w-full h-96 object-cover rounded-lg shadow-lg" alt="Team of explorers looking at a map in a forest" src="https://images.unsplash.com/photo-1515966071294-08f1d52f6246" /> */}
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 text-center">

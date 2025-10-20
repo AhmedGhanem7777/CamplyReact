@@ -1423,15 +1423,15 @@ const ARAB_COUNTRIES = [
 //   { name: "البحرين", img: "https://images.unsplash.com/photo-1500534623283-312aade485b7" },
 // ];
 const FEATURED_COUNTRIES = [
-  { name: "عُمان", img: "" },
+  { name: "لبنان", img: "" },
   { name: "السعودية", img: "" },
+  { name: "عمان", img: "" },
   { name: "الإمارات", img: "" },
   { name: "المغرب", img: "" },
   { name: "الأردن", img: "" },
   { name: "مصر", img: "" },
   { name: "تونس", img: "" },
   { name: "الجزائر", img: "" },
-  { name: "لبنان", img: "" },
   { name: "قطر", img: "" },
   { name: "الكويت", img: "" },
   { name: "البحرين", img: "" },
@@ -1557,7 +1557,7 @@ export default function Home() {
   return (
     <PageTransition>
       {/* Filters over Hero */}
-      <section className="relative">
+      <section className="relative mb-5">
         <HeroCarousel />
 
         {/* صندوق الفلاتر فوق السلايدر */}
@@ -1565,7 +1565,7 @@ export default function Home() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="absolute inset-x-0 -bottom-10 z-30"
+          className="absolute inset-x-0 -bottom-25 z-30"
         >
           <div className="container">
             <div className="bg-background p-6 rounded-lg shadow-lg border">
@@ -1617,10 +1617,10 @@ export default function Home() {
       </section>
 
       {/* مسافة لتعويض رفع الفلاتر فوق السلايدر */}
-      <div className="h-16" />
+      <div className="h-16 mt-5" />
 
       {/* Countries spotlight (12 بطاقة بصورة) */}
-      <section className="py-10">
+      <section className="py-10 mt-5">
         <div className="container">
           <motion.h2
             initial={{ opacity: 0, y: 8 }}

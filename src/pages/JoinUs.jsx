@@ -537,13 +537,13 @@ function StepRulesPricing({ data, setData }) {
         <h3 className="text-md font-semibold">أوقات الدخول والخروج</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
-            <label className="text-sm font-medium">بداية تسجيل الدخول</label>
+            <label className="text-sm font-medium"> تسجيل الدخول</label>
             <Input type="time" value={data.rules.checkInFrom} onChange={(e) => updateRules({ checkInFrom: e.target.value })} />
           </div>
-          <div>
+          {/* <div>
             <label className="text-sm font-medium">نهاية تسجيل الدخول</label>
             <Input type="time" value={data.rules.checkInTo} onChange={(e) => updateRules({ checkInTo: e.target.value })} />
-          </div>
+          </div> */}
           <div>
             <label className="text-sm font-medium">تسجيل الخروج</label>
             <Input type="time" value={data.rules.checkOut} onChange={(e) => updateRules({ checkOut: e.target.value })} />

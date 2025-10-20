@@ -55,7 +55,7 @@ const Footer = () => {
                   onClick={() => setTermsOpen(true)}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4"
                 >
-                  شروط الخدمة
+                  الشروط والأحكام
                 </button>
               </li>
             </ul>
