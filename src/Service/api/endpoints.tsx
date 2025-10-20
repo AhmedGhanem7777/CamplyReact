@@ -1,16 +1,11 @@
 // src/api/endpoints.ts
 import API from "./base";
 
-
-// ======= Authentication =======
-
 // Login
 export const loginUser = async (email: string, password: string) => {
   const res = await API.post("/api/Account/login", { email, password });
   return res.data;
 };
-
-
 
 // Register
 export const registerUser = async (data: {
@@ -23,8 +18,6 @@ export const registerUser = async (data: {
   const res = await API.post("/api/Account/register", data);
   return res.data;
 };
-
-
 
 // Forgot Password
 export const forgotPassword = async (email: string) => {

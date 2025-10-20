@@ -1,7 +1,3 @@
-
-
-
-
 // src/pages/Favorites.tsx
 import React, { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "../components/ui/card";

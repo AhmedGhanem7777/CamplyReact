@@ -15,7 +15,7 @@ export type ApiCamp = {
   hasAccommodation: boolean;
   priceWeekdays: number;
   priceHolidays: number;
-  approvalStatus: string; // من API: "موافق عليه" | "قيد المراجعة" | "مرفوض" ...إلخ
+  approvalStatus: string;
   reviewsAverage: number;
   reviewsCount: number;
   images: ApiImage[];

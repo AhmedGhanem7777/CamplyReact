@@ -4,18 +4,16 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Textarea } from "../components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
-// استورد بقية عناصر UI التي تستعملها نفس JoinUs الحالية (Checkbox... إلخ)
-// انسخ نفس القوائم/الخيارات/الثوابت من JoinUs (propertyTypes, countriesList,...)
 import { useToast } from "../components/ui/use-toast";
 import { api } from "../lib/api";
 
 type JoinWizardProps = {
-  apiBase?: string;             // اختياري
-  authToken?: string;           // اختياري
-  ownerId?: string | null;      // يمرر من MyCamps (مستخدم مسجّل)
-  onSuccess?: () => void;       // لإعادة التحميل وإغلاق النافذة
-  onCancel?: () => void;        // لإغلاق النافذة
-  mode?: "full" | "owner";      // owner يخفي حقول الحساب الحساسة إذا رغبت
+  apiBase?: string;           
+  authToken?: string;           
+  ownerId?: string | null;     
+  onSuccess?: () => void;       
+  onCancel?: () => void;       
+  mode?: "full" | "owner";    
 };
 
 export default function JoinWizard({ apiBase = "", authToken, ownerId, onSuccess, onCancel, mode = "full" }: JoinWizardProps) {

@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect, useMemo, useRef } from "react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
@@ -273,7 +270,7 @@ export default function AdminJoinRequests({ apiBase = "https://camply.runasp.net
                 <SelectTrigger className="w-full sm:w-40"><SelectValue /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">الكل</SelectItem>
-                  <SelectItem value="0">قيد الانتظار</SelectItem>
+                  <SelectItem value="0">قيد المراجعه</SelectItem>
                   <SelectItem value="1">موافق عليها</SelectItem>
                   <SelectItem value="2">مرفوضة</SelectItem>
                 </SelectContent>
@@ -295,7 +292,7 @@ export default function AdminJoinRequests({ apiBase = "https://camply.runasp.net
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <Card className="hover:shadow-lg transition-all duration-200"><CardHeader className="pb-3"><CardTitle className="text-sm font-medium text-muted-foreground">إجمالي الطلبات</CardTitle></CardHeader><CardContent><div className="text-2xl font-bold">{totalItems}</div></CardContent></Card>
-          <Card className="hover:shadow-lg transition-all duration-200"><CardHeader className="pb-3"><CardTitle className="text-sm font-medium text-amber-600">قيد الانتظار</CardTitle></CardHeader><CardContent><div className="text-2xl font-bold text-amber-600">{pendingCount}</div></CardContent></Card>
+          <Card className="hover:shadow-lg transition-all duration-200"><CardHeader className="pb-3"><CardTitle className="text-sm font-medium text-amber-600">قيد المراجعه</CardTitle></CardHeader><CardContent><div className="text-2xl font-bold text-amber-600">{pendingCount}</div></CardContent></Card>
           <Card className="hover:shadow-lg transition-all duration-200"><CardHeader className="pb-3"><CardTitle className="text-sm font-medium text-emerald-600">موافق عليها</CardTitle></CardHeader><CardContent><div className="text-2xl font-bold text-emerald-600">{approvedCount}</div></CardContent></Card>
           <Card className="hover:shadow-lg transition-all duration-200"><CardHeader className="pb-3"><CardTitle className="text-sm font-medium text-rose-600">مرفوضة</CardTitle></CardHeader><CardContent><div className="text-2xl font-bold text-rose-600">{rejectedCount}</div></CardContent></Card>
         </div>

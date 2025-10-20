@@ -1,8 +1,3 @@
-
-
-
-
-
 import { useState, FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Mail, Loader2, Tent } from "lucide-react";

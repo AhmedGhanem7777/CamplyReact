@@ -20,12 +20,10 @@ export type PagedResponse<T> = {
 export const listUsers = (params: { pageIndex: number; pageSize: number }) =>
   api.get<PagedResponse<UserListItem>>("/api/User", { params });
 
-// اختياري: جلب كل المستخدمين عبر التصفح على الصفحات
 export const fetchAllUsers = async () => {
   const pageSize = 100;
   let pageIndex = 1;
   const all: UserListItem[] = [];
-  // حارس أقصى 100 صفحة لتفادي الحلقات اللانهائية
   for (let i = 0; i < 100; i++) {
     const { data } = await listUsers({ pageIndex, pageSize });
     all.push(...(data.data ?? []));

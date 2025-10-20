@@ -1,6 +1,3 @@
-
-
-
 // src/pages/Bookings.tsx
 import { useEffect, useState } from "react";
 import {

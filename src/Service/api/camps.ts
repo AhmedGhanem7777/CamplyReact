@@ -1,11 +1,8 @@
-
-
 // src/Service/api/camps.ts
 import { api } from "../../lib/api";
 
 const API_BASE = (import.meta as any)?.env?.VITE_API_BASE_URL || "https://camply.runasp.net";
 
-// Types matching AdminCampListItemDto (with public listing shape)
 export type CampImage = {
   id?: number;
   imageUrl: string;
@@ -18,7 +15,7 @@ export type CampServiceMap =
 
 export type CampTimeSlot = {
   name?: string;
-  startTime?: string; // "HH:mm:ss" أو "HH:mm"
+  startTime?: string; 
   endTime?: string;
   dayType?: string;
 };

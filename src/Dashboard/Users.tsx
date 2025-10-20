@@ -1,5 +1,3 @@
-
-
 import { useEffect, useRef, useState } from "react";
 import { MoreVertical, Trash2, Loader2, Users as UsersIcon } from "lucide-react";
 import { listUsers, fetchAllUsers, type UserListItem, deleteUser } from "../Service/api/users";
@@ -27,7 +25,7 @@ export default function UsersTable() {
   const [openMenu, setOpenMenu] = useState<number | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  // جلب المستخدِمين بترقيم الصفحات
+
   useEffect(() => {
     (async () => {
       try {
@@ -44,7 +42,7 @@ export default function UsersTable() {
     })();
   }, [currentPage, rowsPerPage]);
 
-  // إغلاق قائمة الإجراءات عند النقر خارجها
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -134,7 +132,7 @@ export default function UsersTable() {
                         <div className="text-xs text-gray-400 truncate">{user.phoneNumber}</div>
                       </div>
 
-                      <div ref={menuRef} className="relative">
+                      {/* <div ref={menuRef} className="relative">
                         <button
                           onClick={() => setOpenMenu(openMenu === idx ? null : idx)}
                           className="p-1 hover:bg-[#23232b] rounded cursor-pointer"
@@ -156,7 +154,7 @@ export default function UsersTable() {
                             </button>
                           </div>
                         )}
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="mt-3 flex items-center gap-2 flex-wrap">

@@ -1,6 +1,3 @@
-
-
-
 import { api } from "../api/client";
 
 export type DashboardStats = {
@@ -22,7 +19,7 @@ export type DashboardStats = {
 };
 
 export type BookingTrendPoint = {
-  day: string;   // سيرفر يعيد Date، ستصل كـ ISO string
+  day: string;   
   count: number;
 };
 

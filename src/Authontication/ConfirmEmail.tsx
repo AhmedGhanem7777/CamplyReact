@@ -1,6 +1,3 @@
-
-
-
 import { useNavigate, useLocation } from "react-router-dom";
 import { Mail, Tent } from "lucide-react";
 

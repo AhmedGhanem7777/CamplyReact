@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // src/pages/Dashboard/CampsPage.tsx
 import { useState, useEffect, useMemo } from "react";
 import { MoreVertical, Eye, Trash, Loader2, Star, Info } from "lucide-react";

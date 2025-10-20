@@ -1,5 +1,3 @@
-
-
 // src/Service/api/basket.ts
 import { api } from "../../lib/api";
 
@@ -8,7 +6,7 @@ export type BasketItemDto = {
   productName: string;
   pictureUrl?: string;
   unitPrice: number;
-  currency: string; // "USD"
+  currency: string; 
   nights: number;
   units: number;
   lineSubtotal: number;
@@ -24,7 +22,6 @@ export type CustomerBasketDto = {
   currency: string;
 };
 
-// المعرّف المحلي للسلة (userId إن وُجد وإلا ضيف)
 function getBasketId() {
   const uid = localStorage.getItem("userId") || sessionStorage.getItem("userId");
   if (uid) return uid;
@@ -48,7 +45,6 @@ export async function getBasket(): Promise<CustomerBasketDto | null> {
   }
 }
 
-// إنشاء/جلب السلة: يحاول GET، وإن لم يجد ينشئ عبر POST
 export async function getOrCreateBasket(currency = "USD"): Promise<CustomerBasketDto> {
   const existing = await getBasket();
   if (existing && existing.id) return existing;
@@ -77,7 +73,6 @@ export async function deleteBasket(): Promise<void> {
   await api.delete(`/api/Basket`, { params: { id } });
 }
 
-// إضافة عنصر: ينشئ السلة أولاً إن لم تكن موجودة، ثم يدمج ويحدّث عبر POST
 export async function addItemToBasket(input: {
   campId: number;
   title: string;
@@ -92,7 +87,6 @@ export async function addItemToBasket(input: {
   const units = Math.max(1, input.units ?? 1);
   const current = await getOrCreateBasket(currency);
 
-  // منع خلط العملات
   if (current.items.length > 0 && current.currency !== currency) {
     throw new Error("لا يمكن خلط عملات مختلفة داخل نفس السلة.");
   }

@@ -1,16 +1,9 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Camply Dark Theme - Black + Emerald Green */
     --background: 220 13% 8%;
     --foreground: 220 13% 91%;
 
@@ -81,12 +74,10 @@ All colors MUST be HSL.
     font-variation-settings: "opsz" auto;
   }
   
-  /* RTL Support */
   html[dir="rtl"] {
     direction: rtl;
   }
   
-  /* Smooth animations */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -130,7 +121,6 @@ All colors MUST be HSL.
     animation: scaleIn 0.2s ease-out;
   }
   
-  /* Scrollbar styling */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;

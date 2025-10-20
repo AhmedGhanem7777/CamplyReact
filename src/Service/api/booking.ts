@@ -1,6 +1,3 @@
-
-
-
 // src/Service/api/booking.ts
 import { api } from "../api/client";
 

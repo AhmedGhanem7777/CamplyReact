@@ -1,4 +1,3 @@
-
 export function parseJwt(token?: string): any | null {
   try {
     if (!token) return null;

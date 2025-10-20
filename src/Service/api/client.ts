@@ -8,7 +8,6 @@ export const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-// إضافة Authorization Bearer تلقائيًا من localStorage أو sessionStorage
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token") || sessionStorage.getItem("token");
   if (token) {
@@ -17,7 +16,6 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// إزالة التوكن عند انتهاء صلاحيته (401)
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -28,7 +26,6 @@ api.interceptors.response.use(
       sessionStorage.removeItem("token");
       sessionStorage.removeItem("role");
       sessionStorage.removeItem("userId");
-      // يمكن إضافة توجيه إلى /login لاحقًا
     }
     return Promise.reject(error);
   }

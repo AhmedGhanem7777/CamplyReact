@@ -1,4 +1,3 @@
-
 // src/App.jsx
 import React from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
@@ -9,7 +8,6 @@ import Footer from '@/components/layout/Footer';
 import FloatingSupportButton from '@/components/FloatingSupportButton';
 import MainLayout from '@/components/layout/MainLayout';
 
-// صفحات عامة
 import Home from '@/pages/Home';
 import AboutUs from '@/pages/AboutUs';
 import JoinUs from '@/pages/JoinUs';
@@ -21,7 +19,6 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Favorites from '@/pages/Favorites';
 import AllCampsPage from '@/pages/AllCampsPage';
 
-// الهوية
 import Login from './Authontication/Login';
 import Register from './Authontication/Register';
 import ForgetPass from './Authontication/ForgetPass';
@@ -29,7 +26,6 @@ import ResetPassword from './Authontication/ResetPassword';
 import ConfirmEmail from './Authontication/ConfirmEmail';
 import ConfirmEmailCallback from './Authontication/ConfirmEmailCallback';
 
-// لوحة التحكم
 import DashboardContent from './Dashboard/DashboardContent';
 import CampsPage from './Dashboard/CampsPage';
 import Bookings from './Dashboard/Bookings';
@@ -65,14 +61,12 @@ function App() {
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/confirm-email" element={<ConfirmEmailCallback />} />
 
-            {/* ضيوف فقط */}
             <Route path="/login"        element={<GuestOnlyRoute><Login /></GuestOnlyRoute>} />
             <Route path="/register"     element={<GuestOnlyRoute><Register /></GuestOnlyRoute>} />
             <Route path="/forgetpass"   element={<GuestOnlyRoute><ForgetPass /></GuestOnlyRoute>} />
             <Route path="/resetpass"    element={<GuestOnlyRoute><ResetPassword /></GuestOnlyRoute>} />
             <Route path="/confirmemail" element={<GuestOnlyRoute><ConfirmEmail /></GuestOnlyRoute>} />
 
-            {/* عامة */}
             <Route path="/home"            element={<Home />} />
             <Route path="/about"           element={<AboutUs />} />
             <Route path="/join"            element={<JoinUs />} />
@@ -86,7 +80,6 @@ function App() {
             {/* <Route path="/pricing"       element={<Pricing />} /> */}
             <Route path="/change-password"       element={<ChangePassword />} />
 
-            {/* لوحة التحكم */}
             <Route
               path="/dashboard"
               element={

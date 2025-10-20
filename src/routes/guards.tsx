@@ -1,12 +1,9 @@
-
-
 import { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
 const getToken = () => localStorage.getItem("token") || sessionStorage.getItem("token");
 const getRole  = () => localStorage.getItem("role")  || sessionStorage.getItem("role")  || "";
 
-// مسارات مقيّدة: تمنع الوصول عند غياب التوكن أو عدم السماح بالدور
 export const ProtectedRoute = ({ children, allow }: { children: ReactNode; allow: string[] }) => {
   const location = useLocation();
   const token = getToken();
@@ -16,7 +13,6 @@ export const ProtectedRoute = ({ children, allow }: { children: ReactNode; allow
   return <>{children}</>;
 };
 
-// مسارات الهوية للضيوف فقط: إخفاؤها عن المستخدم المسجل
 export const GuestOnlyRoute = ({ children }: { children: ReactNode }) => {
   const token = getToken();
   const role  = getRole();

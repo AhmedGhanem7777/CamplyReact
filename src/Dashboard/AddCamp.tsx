@@ -1,5 +1,3 @@
-
-
 // src/pages/Dashboard/AddCamp.tsx
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,9 +10,7 @@ import { useToast as useUiToast } from "../components/ui/use-toast";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { api } from "../lib/api";
 
-// const propertyTypes = ["خيمة","نُزل","عريش","كرافان","بود","غلمبينغ"];
 
-// أنواع المخيمات (عربي موحّد)
 const propertyTypes = [
   "مخيمات الخيام التقليدية (Tent Camping)",
   "(RV / Caravan Camping) مخيمات الكرفانات ",

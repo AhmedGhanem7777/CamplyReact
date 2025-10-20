@@ -1,4 +1,3 @@
-
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -16,9 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { da } from "zod/v4/locales";
-// في أعلى الملف
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+
 
 import { WhatsAppCircle } from "@/pages/WhatsAppCircle";
 
@@ -714,7 +711,7 @@ export default function CampDetails() {
                       onClick={() => setDayType("weekday")}
                       className={dayType === "weekday" ? "bg-primary text-primary-foreground" : ""}
                     >
-                      يوم الاسبوع
+                      أيام الاسبوع
                     </Button>
                     <Button
                       type="button"
@@ -722,7 +719,7 @@ export default function CampDetails() {
                       onClick={() => setDayType("holiday")}
                       className={dayType === "holiday" ? "bg-primary text-primary-foreground" : ""}
                     >
-                      يوم العطله
+                      أيام العطلة
                     </Button>
                   </div>
                 </div>
